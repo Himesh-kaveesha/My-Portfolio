@@ -60,8 +60,7 @@ export default function Footer() {
             © 2025 Himesh Kaveesha. All rights reserved.
           </div>
           <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
-            <span>Made with</span>
-            <span className="text-red-500 animate-pulse">❤️</span>
+            
             <span>in Sri Lanka</span>
             <span>🇱🇰</span>
           </div>
