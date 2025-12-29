@@ -12,29 +12,26 @@ export default function Hero({ scrollY }) {
     let timer;
     
     if (isDeleting) {
-      // Backspacing
       if (currentIndex > 0) {
         timer = setTimeout(() => {
           setDisplayedName(fullName.substring(0, currentIndex - 1));
           setCurrentIndex(currentIndex - 1);
-          setTypingSpeed(50); // Faster when deleting
+          setTypingSpeed(50);
         }, typingSpeed);
       } else {
         setIsDeleting(false);
         setTypingSpeed(100);
       }
     } else {
-      // Typing
       if (currentIndex < fullName.length) {
         timer = setTimeout(() => {
           setDisplayedName(fullName.substring(0, currentIndex + 1));
           setCurrentIndex(currentIndex + 1);
         }, typingSpeed);
       } else {
-        // Pause at the end before restarting
         timer = setTimeout(() => {
           setIsDeleting(true);
-        }, 2000); // Wait 2 seconds before deleting
+        }, 2000);
       }
     }
 
@@ -48,7 +45,6 @@ export default function Hero({ scrollY }) {
         style={{ transform: `translateY(${scrollY * 0.5}px)` }}
       />
       
-      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-20 animate-float"></div>
         <div className="absolute top-40 right-20 w-16 h-16 bg-teal-200 rounded-full opacity-20 animate-float" style={{animationDelay: '2s'}}></div>
@@ -71,11 +67,12 @@ export default function Hero({ scrollY }) {
             </span>
           </h1>
           <div className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-4">
-            <span className="font-semibold">Frontend Developer</span> & 
-            <span className="font-semibold"> UI/UX Designer</span>
+            <span className="font-semibold">Full Stack Developer</span> & 
+            <span className="font-semibold"> UI/UX Designer</span> & 
+            <span className="font-semibold"> Business Analyst</span>
           </div>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Motivated Software Engineering student with hands-on experience in frontend development using React, React Native, and modern design tools. Currently pursuing BSc in Computer Science at University of Colombo.
+            Motivated Software Engineering student with hands-on experience in full stack development, business analysis , and UI/UX design. Skilled in building scalable web and mobile applications using React, React Native, backend technologies, and user-centered design practices. Currently pursuing a BSc in Computer Science at the University of Colombo.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button 

@@ -1,18 +1,22 @@
-import { Palette, Code, Server } from 'lucide-react';
-import { skills } from '../utils/constants';
+import { Palette, Code, Server } from "lucide-react";
+import { skills } from "../utils/constants";
 
 const SkillBar = ({ skill, delay }) => (
   <div className="mb-6" style={{ animationDelay: `${delay}ms` }}>
     <div className="flex justify-between mb-2">
-      <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
-      <span className="text-blue-600 dark:text-blue-400 font-bold">{skill.level}%</span>
+      <span className="text-gray-700 dark:text-gray-300 font-medium">
+        {skill.name}
+      </span>
+      <span className="text-blue-600 dark:text-blue-400 font-bold">
+        {skill.level}%
+      </span>
     </div>
     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
-      <div 
+      <div
         className="h-full bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 rounded-full transform origin-left transition-transform duration-1000 ease-out"
-        style={{ 
+        style={{
           transform: `scaleX(${skill.level / 100})`,
-          transitionDelay: `${delay}ms`
+          transitionDelay: `${delay}ms`,
         }}
       />
     </div>
@@ -28,19 +32,24 @@ export default function Skills() {
             Technical Skills
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            A blend of frontend development expertise and UI/UX design creativity
+            A blend of frontend development expertise and UI/UX design
+            creativity
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-4 gap-8">
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
             <div className="flex items-center mb-8">
               <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg mr-4">
                 <Palette className="w-8 h-8 text-blue-600" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Design Tools</h3>
-                <p className="text-gray-600 dark:text-gray-300">Creating beautiful interfaces</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Design Tools
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Creating beautiful interfaces
+                </p>
               </div>
             </div>
             {skills.design.map((skill, index) => (
@@ -54,12 +63,43 @@ export default function Skills() {
                 <Code className="w-8 h-8 text-teal-600" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Frontend</h3>
-                <p className="text-gray-600 dark:text-gray-300">Building interactive apps</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Frontend
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Building interactive apps
+                </p>
               </div>
             </div>
             {skills.frontend.map((skill, index) => (
-              <SkillBar key={skill.name} skill={skill} delay={index * 200 + 1000} />
+              <SkillBar
+                key={skill.name}
+                skill={skill}
+                delay={index * 200 + 1000}
+              />
+            ))}
+          </div>
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+            <div className="flex items-center mb-8">
+              <div className="bg-purple-100 dark:bg-purple-900 p-3 rounded-lg mr-4">
+                <Server className="w-8 h-8 text-purple-600" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Backend
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  APIs & server-side logic
+                </p>
+              </div>
+            </div>
+
+            {skills.backend.map((skill, index) => (
+              <SkillBar
+                key={skill.name}
+                skill={skill}
+                delay={index * 200 + 2000}
+              />
             ))}
           </div>
 
@@ -69,12 +109,20 @@ export default function Skills() {
                 <Server className="w-8 h-8 text-green-600" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Tools</h3>
-                <p className="text-gray-600 dark:text-gray-300">Development workflow</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Tools & Databases
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Development workflow with databases
+                </p>
               </div>
             </div>
             {skills.tools.map((skill, index) => (
-              <SkillBar key={skill.name} skill={skill} delay={index * 200 + 2000} />
+              <SkillBar
+                key={skill.name}
+                skill={skill}
+                delay={index * 200 + 2000}
+              />
             ))}
           </div>
         </div>

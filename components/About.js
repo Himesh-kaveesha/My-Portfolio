@@ -87,7 +87,7 @@ export default function About() {
             </div>
 
             {/* Reference Section */}
-            <div className="bg-gradient-to-br from-green-600 via-blue-600 to-teal-600 p-1 rounded-2xl">
+            {/* <div className="bg-gradient-to-br from-green-600 via-blue-600 to-teal-600 p-1 rounded-2xl">
               <div className="bg-white dark:bg-gray-800 p-6 rounded-xl">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                   <User className="w-6 h-6 mr-2 text-green-600" />
@@ -101,7 +101,7 @@ export default function About() {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
