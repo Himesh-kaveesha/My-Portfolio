@@ -11,7 +11,7 @@ export default function About() {
               About Me
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              I'm a motivated Software Engineering student at the University of Colombo School of Computing, specializing in frontend development and UI/UX design. With hands-on experience in React, React Native, and modern design tools, I focus on creating clean, interactive, and cross-platform solutions.
+              I'm a motivated Software Engineering  at the University of Colombo School of Computing, specializing in frontend development and UI/UX design. With hands-on experience in React, React Native, and modern design tools, I focus on creating clean, interactive, and cross-platform solutions.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
               My passion lies in building responsive web and mobile applications that solve real-world problems, particularly in sectors like tourism and healthcare. I believe in continuous learning and am currently pursuing Google UX Design certification to enhance my design skills.
