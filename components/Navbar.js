@@ -8,8 +8,8 @@ export default function Navbar({ scrollY }) {
   const handleDownloadCV = () => {
     // Create a temporary anchor element
     const a = document.createElement('a');
-    a.href = '/files/Himesh-Kaveesha_CV.pdf';
-    a.download = 'Himesh-Kaveesha_CV.pdf';
+    a.href = '/files/Himesh_Kaveesha_CV.pdf';
+    a.download = 'Himesh_Kaveesha_CV.pdf';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
